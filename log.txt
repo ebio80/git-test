@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Set the directory where your log files are located
+LOG_DIR="/path/to/your/log/files"
+
+# Find and delete log files older than 5 days
+find "$LOG_DIR" -type f -name "*.log" -mtime +5 -exec rm -f {} \;
+
+echo "Old log files deleted."
